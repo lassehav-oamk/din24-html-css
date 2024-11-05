@@ -1,0 +1,28 @@
+.sign-in-container {
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.sign-in-form {
+    /* on its own this does not do anything, 
+    but it serves as a reference point for the child element,
+    which is positioned absolutely */
+    position: relative; 
+}
+
+.sign-in-form label {
+    position: absolute;
+    background-color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    left: 99px;
+    top: -5px;
+    font-size: 10px;
+}
+
+.sign-in-form input {
+    width: 300px;
+    padding: 5px;
+}
