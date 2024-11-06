@@ -26,3 +26,24 @@
     width: 300px;
     padding: 5px;
 }
+
+.text-over-line {
+    position: relative;
+    top: -20px;
+    background-color: white;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.third-party-signup {
+    border: 1px solid black;
+    width: 300px;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    font-family: "Oxygen", sans-serif;
+}
