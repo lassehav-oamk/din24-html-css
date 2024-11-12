@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .flex-container {
+                display: flex;
+                justify-content: space-between;
+                background-color: gray;
+                width: 600px;
+                padding: 10px;
+            }
+
+            .item {
+                background-color: white;
+                padding: 10px;                
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Flexbox positive and negative free space</h1>
+        <h2>Positive free space available</h2>
+        <p>The container is sized 600px width, each item is 100px wide. Thus 600 - 4x100 = 200px available free space. </p>
+        <div class="flex-container">
+            <div class="item">Hello</div>
+            <div class="item">Flexbox</div>
+            <div class="item">Item</div>
+            <div class="item">World</div>
+        </div>
+
+        <h2>Negative free space available</h2>
+        <p>The container is sized 600px width, each item is 200px wide. Thus 600 - 4x200 = -200px available free space. </p>
+        <div class="flex-container">
+            <div class="item" style="width: 200px; flex-shrink: 0;">Hello</div>
+            <div class="item" style="width: 200px;">Flexbox</div>
+            <div class="item" style="width: 200px;">Item</div>
+            <div class="item" style="width: 200px; flex-shrink: 0;">World</div>
+        </div>
+    </body>
+</html>
