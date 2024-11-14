@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .main-navbar {
+            display: flex;
+            background-color: gray;
+            align-items: stretch;            
+        }
+
+        .navbar-item {
+            padding: 10px;
+            background-color: yellow;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+
+        .navbar-item > img {
+            width: 200px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .main-navbar {
+                flex-direction: column;
+            }
+
+            .navbar-item {                
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Navbar</h1>
+    
+
+
+    <div class="main-navbar">
+        <div class="navbar-item" style="flex-grow: 1;">
+            <img src="images/oamk-logo.png">
+        </div>
+        <div class="navbar-item">Products</div>
+        <div class="navbar-item">Services</div>
+        <div class="navbar-item">Careers</div>
+        <div class="navbar-item">Shop</div>
+    </div>
+</body>
