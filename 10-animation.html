@@ -12,6 +12,7 @@
             align-items: center;
         }
         .box {
+            color: white;
             width: 100px;
             height: 100px;
             background-color: red;
@@ -22,12 +23,46 @@
             width: 500px;
             height: 500px;
         }
+
+
+
+        .animated-box {
+            color: white;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            
+            position: relative;
+        }
+
+        .animated-box:hover {
+            animation: animate 2s infinite alternate ease-in-out;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateX(0px);
+            }
+            25% {
+                transform: translateX(0px) translateY(100px);                
+            }
+            50% {
+                transform: translateX(100px) translateY(100px);                
+            }
+            75% {
+                transform: translateX(100px) translateY(0px);                
+            }
+            100% {
+                transform: translateX(0px) translateY(0px);                
+            }
+        }
         
     </style>
     
 </head>
 <body>
     <div class="container">
-        <div class="box"></div>
+        <div class="box">Transition</div>
+        <div class="animated-box">Animation</div>        
     </div>
 </html>
