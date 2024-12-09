@@ -1,68 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Animation</title>
-    <style>
-        .container {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .box {
-            color: white;
-            width: 100px;
-            height: 100px;
-            background-color: red;
-            transition: width 2s, height 1s;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <title>Animation</title>
+        <style>
+            .container {
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .box {
+                color: white;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                transition: all 1s;
+            }
 
-        .box:hover {
-            width: 500px;
-            height: 500px;
-        }
-
+            .box:hover {
+                width: 500px;
+            }
 
 
-        .animated-box {
-            color: white;
-            width: 100px;
-            height: 100px;
-            background-color: blue;
+
+            .animated-box {
+                color: white;
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                
+                position: relative;
+            }
+
+            .animated-box:hover {
+                animation: animate 1s 3 ease-in-out;
+            }
+
+            @keyframes animate {
+                0% {
+                    transform: translateX(0px);
+                }
+                25% {
+                    transform: translateX(0px) translateY(100px);
+                    opacity: 0;
+                    background-color: yellow;
+                }
+                50% {
+                    transform: translateX(100px) translateY(100px);                
+                    opacity: 1;
+                }
+                75% {
+                    transform: translateX(100px) translateY(0px);                
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateX(0px) translateY(-100px);                
+                    opacity: 1;
+                }
+            }
             
-            position: relative;
-        }
-
-        .animated-box:hover {
-            animation: animate 2s infinite alternate ease-in-out;
-        }
-
-        @keyframes animate {
-            0% {
-                transform: translateX(0px);
-            }
-            25% {
-                transform: translateX(0px) translateY(100px);                
-            }
-            50% {
-                transform: translateX(100px) translateY(100px);                
-            }
-            75% {
-                transform: translateX(100px) translateY(0px);                
-            }
-            100% {
-                transform: translateX(0px) translateY(0px);                
-            }
-        }
+        </style>
         
-    </style>
-    
-</head>
-<body>
-    <div class="container">
-        <div class="box">Transition</div>
-        <div class="animated-box">Animation</div>        
-    </div>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">Transition</div>
+            <div class="animated-box">Animation</div>        
+        </div>
+    </body>
 </html>

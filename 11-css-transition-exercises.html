@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #test-button {
+                background-color: red;
+                color: white;
+                transition: background-color 0.4s;
+            }
+
+            #test-button:hover {
+                background-color: blue;
+            }
+
+            #ex2 {
+                width: 300px;
+                transition: width 0.5s;
+                background-color: greenyellow;
+            }
+
+            #ex2:hover {
+                width: 500px;
+            }
+
+            #ex3 {
+                opacity: 0.3;
+                transition: opacity 0.5s;
+            }
+
+            #ex3:hover {
+                opacity: 1;
+            }
+
+            #ex4 {
+                width: 300px;
+                height: 300px;
+                background-color: lightcoral;
+                margin: 20px;
+                transition: all 0.5s;
+                position: relative;
+                
+            }
+
+            #ex4:hover {
+                transform: translateX(100px) rotateZ(45deg);
+            }
+        </style>
+    </head>
+    <body>
+        <button id="test-button">Exercise 1</button>
+        <div id="ex2">Exercise 2</div>
+        <div id="ex3">This is the text for Exercise 3, it will be faded in when hovering mouse.</div>
+        <div id="ex4">Exercise 4</div>
+    </body>
+</html>
